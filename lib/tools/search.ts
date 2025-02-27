@@ -41,7 +41,7 @@ export const searchTool = tool({
       if (searchAPI === 'searxng' && effectiveSearchDepth === 'advanced') {
         // API route for advanced SearXNG search
         const baseUrl =
-          process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+          process.env.NEXT_PUBLIC_BASE_URL || 'https://morphic-y7vu.onrender.com/'
         const response = await fetch(`${baseUrl}/api/advanced-search`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
