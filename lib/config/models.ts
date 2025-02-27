@@ -16,7 +16,7 @@ export function validateModel(model: any): model is Model {
 export async function getModels(): Promise<Model[]> {
   try {
     const headersList = await headers()
-    const baseUrl = new URL(headersList.get('x-url') || 'http://localhost:3000')
+    const baseUrl = new URL(headersList.get('x-url') || 'https://morphic-y7vu.onrender.com')
     const modelUrl = new URL('/config/models.json', baseUrl.origin)
 
     const response = await fetch(modelUrl, {
